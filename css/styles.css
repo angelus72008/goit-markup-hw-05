@@ -40,9 +40,8 @@ ul {
     padding-right: 15px;
     margin: 0 auto;
   }
-
   
-  /* шапка сайта */
+  /* Components */
   
   .backdrop {
     position: fixed;
@@ -50,12 +49,13 @@ ul {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0,5)
+    background-color: rgba(255, 255, 255, 0.5)
   }
 
   .is-hidden {
     opacity: 0;
     visibility: hidden;
+    /* pointer-events: none; */
   }
   
   .form-wraper {
@@ -65,6 +65,7 @@ ul {
     transform: translateX(-50%);
     width: 528px;
     height: 581px;
+    /* padding: 15px; */
     background-color: #fff;
   }
 
@@ -72,18 +73,21 @@ ul {
   position: absolute;
   top: 8px;
   right: 8px;
- width: 30px;
- height: 30px;
- border-radius: 50%;
-background-color: transparent;
- border: none;
- cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .modal-button {
   width: 11px;
   height: 11px;
 }
+  
+  /* шапка сайта */
+  
 
   .page-header {
     padding-top: 25px;
@@ -91,7 +95,7 @@ background-color: transparent;
   }
   
   .navigation .link.current::after {
-    position: fixed;
+    position: absolute;
     content: "";
     left: 315px;
     top: 76px;
@@ -182,13 +186,21 @@ text-decoration: none;
 margin-right: 40px;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .auth-nav:last-child{
   margin-right: 0;
+  padding-left: 30px;
 }
-.auth .auth-nav.current {
-  color: var(--accent-color);
+
+
+.mail-svg {
+  margin-right: 10px;
 }
+
+.phone-svg {
+  margin-right: 10px;
+} 
 
 .mail-svg,
 .phone-svg {
@@ -509,18 +521,12 @@ color: var(--background-color);
 }
 
 .join-link {
-  display: inline-block;
+  display: flex;
   justify-content: center;
   align-items: center;
-  content: "";
   width: 44px;
   height: 44px;
-  background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20px;
-  fill: var(--background-color);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -530,18 +536,22 @@ color: var(--background-color);
   background-color: var(--accent-color);
 }
 
+.join-link:hover .icon {
+  fill: var(--background-color);
+}
+
 .icon {
   fill: var(--background-color);
 }
 
  .join-list {
    display: flex;
-   justify-content: center;
-   justify-content: space-between;
-   padding-top: 20px;
-   list-style: none; 
+   padding-top: 20px;  
  }
 
+ .join-list .join-social-list:not(:last-child){ 
+margin-right: 10px;
+ }
 
 .join-social .icon.current {
   fill: var(--accent-color);
