@@ -178,7 +178,11 @@ ul {
   
 .auth-nav-links {
   display: flex;
-  margin-left: auto;
+  
+}
+
+.auth-nav-links li:last-child {
+  margin-left: 30px;
 }
 
 .auth-nav {
@@ -386,9 +390,10 @@ text-align: center;
 letter-spacing: 0.03em;
 color: var(--text-color);
 padding-top: 10px;
+margin-bottom: 30px;
 }
 
-.team-list-item {
+.team-list-item:hover {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
@@ -597,16 +602,9 @@ letter-spacing: 0.03em;
 color: var(--title-text-color);
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-padding-top: 6px;
-padding-bottom: 6px;
-padding-left: 22px;
-padding-right: 22px;
+padding: 6px 22px;
 }
 
-
-.filter .filter-list.current {
-  color: var(--accent-color);
-}
 
 .filter-list:hover,
 .filter-list:focus {
